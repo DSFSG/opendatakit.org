@@ -1,8 +1,6 @@
 ---
 title: History
 permalink: /community/history/
-sidebar:
-  nav: "community"
 ---
 
 Open Data Kit (or ODK for short) is an open-source suite of tools that helps organizations author, collect, and manage mobile data collection solutions. Our goals are to make open-source and standards-based tools which are easy to try, easy to use, easy to modify and easy to scale. To this end, we are proud members of the  OpenRosa Consortium and active participants in the [JavaRosa](https://bitbucket.org/javarosa/javarosa/wiki/Home) project.
@@ -11,9 +9,9 @@ The ODK founding core developers include researchers at the University of Washin
 
 ODK began as a [google.org](http://google.org) sponsored sabbatical project under the direction of [Gaetano Borriello](http://www.cse.washington.edu/homes/gaetano) in April of 2008 at Google's Seattle offices. The initial team included [Bill Schilit](http://sites.google.com/site/schilit2/) of Google Research, Adam Lerer of MIT (as a Google intern), and Julie Chin of Google.org. UW CSE graduate students [Carl Hartung](http://cs.washington.edu/homes/chartung), [Yaw Anokwa](http://cs.washington.edu/homes/yanokwa), and Waylon Brunette joined the team soon thereafter (as Google interns) and were responsible for the first two deployments of the tools in Uganda and Brazil.
 
-Gaetano, Carl, Yaw and Waylon brought ODK back to UW in September of 2009 and Mitchell Sundt joined the team as a software engineer in 2010. Clarice Larson joined the team as a software engineer in 2013, and Jeff Beorse returned as a software engineer in 2015. [Richard Anderson](http://www.cs.washington.edu/people/faculty/anderson) has led ODK since Gaetano passed away in early 2015. Other contributors at UW include [Brian DeRenzi](http://cs.washington.edu/homes/bderenzi/), Rohit Chaudhri, [Nicola Dell](http://www.cs.washington.edu/homes/nixdell/), and numerous undergraduates. See our [team](//opendatakit.org/about/team) page for a full list of participants.
+Gaetano, Carl, Yaw and Waylon brought ODK back to UW in September of 2009 and Mitchell Sundt joined the team as a software engineer in 2010. Clarice Larson joined the team as a software engineer in 2013, and Jeff Beorse returned as a software engineer in 2015. [Richard Anderson](http://www.cs.washington.edu/people/faculty/anderson) has led ODK since Gaetano passed away in early 2015. Other contributors at UW include [Brian DeRenzi](http://cs.washington.edu/homes/bderenzi/), Rohit Chaudhri, [Nicola Dell](http://www.cs.washington.edu/homes/nixdell/), and numerous undergraduates.
 
-ODK has been funded by a [Google Focused Research Award](http://googleresearch.blogspot.com/2010/02/announcing-googles-focused-research.html) and through [donations](//opendatakit.org/participate/donate/) from users. ODK is supported by a growing community of developers, implementers and users.
+ODK has been funded by a [Google Focused Research Award](http://googleresearch.blogspot.com/2010/02/announcing-googles-focused-research.html) and through donations from users. ODK is supported by a growing community of developers, implementers and users.
 
 ## Team
 
@@ -150,9 +148,7 @@ Below is a list of what others have said about Open Data Kit.
 
 ## Deployments
 
-Below are a few of the deployments of ODK we know about. If you would like to add yours, post your deployment in the [ODK Forum Showcase](https://forum.opendatakit.org/c/showcase).
-
-If you are looking for a company to build a form or customize an ODK tool, try this [list of ODK implementation companies](//opendatakit.org/2011/09/list-of-odk-implementation-companies/).
+Below are a few of the deployments of ODK we know about.
 
 #### International Space Station
 

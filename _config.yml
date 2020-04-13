@@ -15,7 +15,7 @@ title                    : "Open Data Kit"
 title_separator          : "-"
 name                     : &name "Open Data Kit" # &name is a YAML anchor which can be *referenced later
 description              : &description "The Open Data Kit community produces free and open-source software for collecting, managing, and using data in resource-constrained environments."
-tagline                  : The standard for mobile data collection
+tagline                  : 
 url                      : "https://opendatakit.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "opendatakit/website"
@@ -73,12 +73,6 @@ yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
-twitter:
-  username               : &twitter "opendatakit"
-facebook:
-  username               : &facebook "opendatakit"
-  app_id                 :
-  publisher              :
 og_image                 : "/assets/images/logo.png" # Open Graph/Twitter default site image
 # For specifying social profiles, used in _includes/seo.html
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -109,7 +103,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : *facebook
+  facebook         : 
   foursquare       :
   github           : "opendatakit"
   gitlab           :
@@ -123,7 +117,7 @@ author:
   stackoverflow    : # https://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : *twitter
+  twitter          : 
   vine             :
   weibo            :
   xing             :
@@ -205,7 +199,6 @@ defaults:
       share: false
       related: true
       sidebar:
-        nav: "community"
 
   # _pages
   - scope:
@@ -224,8 +217,6 @@ defaults:
       author_profile: true
       share: false
       comments: false
-      sidebar:
-        nav: "community"
 
 
 # Sass/SCSS

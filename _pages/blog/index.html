@@ -3,8 +3,6 @@ title: Blog
 date: 2018-03-01T00:00:00+00:00
 layout: archive
 permalink: /blog/
-sidebar:
-  nav: "community"
 ---
 
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
