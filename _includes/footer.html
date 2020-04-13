@@ -1,0 +1,20 @@
+<div class="page__footer-follow">
+  <ul class="left-align-footer-elements">
+    {% if site.twitter.username %}
+      <li><a href="https://twitter.com/{{ site.twitter.username }}"><span class="icon icon-t" aria-hidden="true" style="margin-right: 6px"></span>Twitter</a></li>
+    {% endif %}
+    {% if site.facebook.username %}
+      <li><a href="https://www.facebook.com/{{ site.facebook.username }}"><span class="icon icon-f" aria-hidden="true" style="margin-right: 6px"></span>Facebook</a></li>
+    {% endif %}
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"><span class="icon icon-r" aria-hidden="true" style="margin-right: 6px"></span>{{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+  </ul>
+  <ul class="right-align-footer-elements">
+    {% if page.url == '/' %}
+      <li><a href="https://github.com/{{ site.author.github }}/website/edit/master/index.html"><span class="icon icon-g" aria-hidden="true" style="margin-right: 6px"></span>Edit on GitHub</a></li>
+    {% else %}
+      <li align="right"><a href="https://github.com/{{ site.author.github }}/website/edit/master/{{ page.path }}"><span class="icon icon-g" aria-hidden="true" style="margin-right: 6px"></span>Edit on GitHub</a></li>
+    {% endif %}
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> and <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>. Site content is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>

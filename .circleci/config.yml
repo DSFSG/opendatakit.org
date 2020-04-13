@@ -1,0 +1,86 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/work
+    docker:
+      - image: circleci/ruby:latest
+    environment:
+      - JEKYLL_ENV=production
+      - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    steps:
+      - checkout
+      - restore_cache:
+          key: gems-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Install checkout requirements
+          command: |
+            curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+            sudo apt-get install git-lfs
+            git lfs install
+      - run:
+          name: Checkout binaries
+          command: git lfs pull
+      - run:
+          name: Install build requirements
+          command: bundle install --path vendor/bundle
+      - run:
+          name: Build site
+          command: bundle exec jekyll build
+      - run:
+          name: Test site
+          command: bundle exec htmlproofer _site --check-html --disable-external --allow_hash_href
+      - save_cache:
+          paths:
+            - /usr/local/bundle/gems
+            - vendor/bundle
+          key: gems-{{ checksum "Gemfile.lock" }}
+      - store_artifacts:
+          path: _site
+          destination: _site
+      - persist_to_workspace:
+          root: ~/work
+          paths:
+            - _site/*
+            - s3_website.yml
+  deploy:
+    working_directory: ~/work
+    docker:
+      - image: circleci/ruby:latest
+    steps:
+      - attach_workspace:
+          at: ~/work
+      - run:
+          name: Install deploy requirements
+          command: |
+              if [[ "$CIRCLE_PROJECT_USERNAME" == "opendatakit" ]]; then \
+                sudo apt-get install -y software-properties-common
+                wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+                sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+                sudo apt-get update
+                sudo apt-get install -y pngquant adoptopenjdk-8-hotspot
+                gem install s3_website && s3_website install
+              fi
+      - run:
+          name: Compress images
+          command: |
+              if [[ "$CIRCLE_PROJECT_USERNAME" == "opendatakit" ]]; then \
+                find _site/assets/images -name '*.png' -exec pngquant --force --ext .png --verbose {} \;
+              fi
+      - run:
+          name: Push to S3
+          command: |
+              if [[ "$CIRCLE_PROJECT_USERNAME" == "opendatakit" ]]; then \
+                s3_website cfg apply
+                s3_website push
+              fi
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master

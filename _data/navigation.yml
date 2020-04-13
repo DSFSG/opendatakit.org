@@ -1,0 +1,27 @@
+# main links
+main:
+  - title: "Community"
+    url: /community/
+  - title: "Software"
+    url: /software/
+  - title: "Help"
+    url: /help/
+
+community:
+  - title: Community
+    url: /community/
+    children:
+    - title: "Blog"
+      url: /blog/
+    - title: "Ecosystem"
+      url: /community/ecosystem/
+    - title: "Governance"
+      url: /community/governance/
+    - title: "History"
+      url: /community/history/
+    - title: "Research"
+      url: /community/research/
+    - title: "Support"
+      url: /community/support/
+    - title: "Thanks"
+      url: /community/thanks/

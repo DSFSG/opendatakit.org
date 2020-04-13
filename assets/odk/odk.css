@@ -1,0 +1,54 @@
+/* General Colors */
+body {
+  background-color: #faf7f3 !important;
+}
+.usa-header {
+  background-color: #D2B48C !important;
+}
+.usa-section-dark {
+  background-color: #8B4513 !important;
+}
+
+/* Fonts */
+ul.usa-sidenav-list li a.usa-current {
+  border-left: 0.4rem solid #8CAAD2 !important;
+  color: #8CAAD2 !important;
+}
+div.usa-layout-docs-main_content a:visited {
+  color: #D2B48C;
+}
+p a, div.usa-layout-docs-main_content li a{
+  color: #8CAAD2 !important;
+  font-weight: bold !important;
+  text-decoration: underline;
+}
+
+/* Code highlighting */
+code {
+  font-size: 0.8em !important;
+}
+figure {
+  margin-left: 0px !important;
+}
+figure pre code table.rouge-table {
+  margin: 0px !important;
+}
+
+/* Blog */
+.pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+.pagination a {
+    &:hover {
+        background-color: #f1f1f1;
+        color: #333;
+    }
+ }
+.pagination {
+    text-align: center;
+ }

@@ -1,0 +1,71 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$masthead-link-color: #424242;
+$footer-background-color: #424242;
+$text-color: #424242;
+
+$primary-color: #1590d3;
+$link-color: #1590d3;
+$link-color-visited: #1590d3;
+$link-color-hover: #1590d3;
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+ul.left-align-footer-elements {
+  float: left;
+  width: 50%;
+  clear: left;
+}
+
+ul.right-align-footer-elements {
+  float: right;
+  width: 50%;
+  clear: right;
+  text-align: right;
+}
+
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(/assets/icons/sprite.svg);
+}
+.icon-r {
+  width: 14px;
+  height: 16px;
+  background-position: 0 0;
+}
+.icon-g {
+  width: 14px;
+  height: 16px;
+  background-position: -32px 0;
+}
+.icon-f {
+  width: 14px;
+  height: 16px;
+  background-position: -64px 0;
+}
+.icon-t {
+  width: 14px;
+  height: 16px;
+  background-position: -96px 0;
+}
+
+table {
+  table-layout: fixed;
+}
+
+span.page__hero-caption {
+  font-family: sans-serif;
+}
+
+img {
+  color: gray;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bolder;
+}

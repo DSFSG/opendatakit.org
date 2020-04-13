@@ -1,0 +1,292 @@
+s3_bucket: opendatakit.org
+s3_endpoint: us-west-2
+
+site: _site
+
+error_document: 404.html
+
+max_age: 300
+gzip: true
+
+exclude_from_upload:
+  - s3_website.yml
+  - CNAME
+
+cloudfront_distribution_id: E1EZ24MS8LWP3O
+
+# commented out due to bug: https://github.com/laurilehmijoki/s3_website/issues/320
+# cloudfront_distribution_config:
+#   default_cache_behavior:
+#     min_ttl: <%= 60 * 60 * 24 %>
+#   aliases:
+#     quantity: 2
+#     items:
+#       - opendatakit.org
+#       - www.opendatakit.org
+
+cloudfront_wildcard_invalidation: true
+
+# folder redirects. executed from top to bottom.
+routing_rules:
+  # help/form-design/*
+  - condition:
+      key_prefix_equals: help/form-design/binding
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-logic
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/external-apps
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: launch-apps-from-collect
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/itext
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-language
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/workarounds
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-best-practices
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/examples
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-question-types
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/open-street-map
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-question-types/#openmapkit-widget
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/cascading-selects
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-logic/#filtering-options-in-select-questions
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/data-preloading
+    redirect:
+      host_name: xlsform.org
+      replace_key_with: '#pre-loading-csv-data'
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design/external-itemsets
+    redirect:
+      host_name: xlsform.org
+      replace_key_with: '#external'
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/form-design
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-design-intro
+      http_redirect_code: 301
+  # help/*
+  - condition:
+      key_prefix_equals: help/image-based-forms
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-question-types/#including-images-as-choices
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/verifying-downloaded-files
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: verify-downloads
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/encrypted-forms
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: encrypted-forms
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/faq
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: faq
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/training-guides
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: ""
+      http_redirect_code: 301
+  # use/aggregate/*
+  - condition:
+      key_prefix_equals: use/aggregate/data-transfer
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: aggregate-data-access
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: use/aggregate/deployment-planning
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: aggregate-deployment-planning
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: use/aggregate/oauth2-service-account
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: oauth2-service
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: use/aggregate/tomcat-install
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: aggregate-tomcat
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: use/aggregate
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: aggregate-intro
+      http_redirect_code: 301
+  # use/briefcase
+  - condition:
+      key_prefix_equals: use/briefcase
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: briefcase-intro
+      http_redirect_code: 301
+  # use/build
+  - condition:
+      key_prefix_equals: use/build
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: build-intro
+      http_redirect_code: 301
+  # use/collect
+  - condition:
+      key_prefix_equals: use/collect
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: collect-intro
+      http_redirect_code: 301
+  # use/form-uploader
+  - condition:
+      key_prefix_equals: use/form-uploader
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: form-uploader
+      http_redirect_code: 301
+  # use/sensors/*
+  - condition:
+      key_prefix_equals: use/sensors
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: printer-widget
+      http_redirect_code: 301
+  # use/validate
+  - condition:
+      key_prefix_equals: use/validate
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: validate
+      http_redirect_code: 301
+  # use/xls
+  - condition:
+      key_prefix_equals: use/xls
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: xlsform
+      http_redirect_code: 301
+  # use/2_0_tools
+  - condition:
+      key_prefix_equals: use/2_0_tools
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: odk2
+      http_redirect_code: 301
+  # use
+  - condition:
+      key_prefix_equals: use
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: ""
+      http_redirect_code: 301
+  # about/*
+  - condition:
+      key_prefix_equals: about/deployments
+    redirect:
+      host_name: forum.opendatakit.org
+      replace_key_with: c/showcase
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: about/research
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: community/research
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: about/security-and-privacy-statement
+    redirect:
+      host_name: docs.opendatakit.org
+      replace_key_with: security-privacy
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: about/team
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: community
+      http_redirect_code: 301      
+  - condition:
+      key_prefix_equals: about/tools
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: software
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: about
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: ""
+      http_redirect_code: 301
+  # downloads
+  - condition:
+      key_prefix_equals: download
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: software
+      http_redirect_code: 301
+  # participate
+  - condition:
+      key_prefix_equals: participate
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: community
+      http_redirect_code: 301
+  # software
+  - condition:
+      key_prefix_equals: software/odk1
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: software/odk
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: software/odk2
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: software/odk-x
+      http_redirect_code: 301
+  - condition:
+      key_prefix_equals: help/help-for-hire
+    redirect:
+      host_name: opendatakit.org
+      replace_key_with: providers
+      http_redirect_code: 301
+
+
+# single page redirects. only use with paths that are not in folder redirects.
+redirects:
+  feed/index.html: feed.xml
+  xiframe/index.html: xlsform
