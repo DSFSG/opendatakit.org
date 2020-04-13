@@ -69,3 +69,39 @@ img {
   font-style: italic;
   font-weight: bolder;
 }
+
+.layout--splash .initial-content {
+
+  .page__lead {
+    text-shadow: 0 0 0;
+    text-align: left; 
+    max-width: none;
+  }
+
+  .feature__item {
+    @media (min-width: 37.5em) {
+      width: 45% !important;
+    }
+  }
+  
+  .archive__item-teaser {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  
+    img {
+      width: auto !important;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .btn {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+  }  
+
+}
