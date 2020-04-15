@@ -109,7 +109,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : *facebook
+  facebook         : 
   foursquare       :
   github           : "opendatakit"
   gitlab           :
@@ -123,7 +123,7 @@ author:
   stackoverflow    : # https://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : *twitter
+  twitter          : 
   vine             :
   weibo            :
   xing             :
@@ -205,7 +205,6 @@ defaults:
       share: false
       related: true
       sidebar:
-        nav: "community"
 
   # _pages
   - scope:
@@ -224,8 +223,6 @@ defaults:
       author_profile: true
       share: false
       comments: false
-      sidebar:
-        nav: "community"
 
 
 # Sass/SCSS
