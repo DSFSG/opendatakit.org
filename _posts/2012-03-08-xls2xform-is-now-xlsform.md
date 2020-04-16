@@ -17,4 +17,4 @@ Additionally, we made some improvements to our error messages, but hopefully you
 
 If you find run into any problems, please post them to our[ issue tracker](https://code.google.com/p/opendatakit/issues/list), or bring them up on our [community mailing list](https://groups.google.com/group/opendatakit).
 
-And finally, here’s a link to XLSForm <a href="/xlsform" target="_blank">here</a>
+And finally, here’s a link to XLSForm <a href="https://getodk.org/xlsform/" target="_blank">here</a>

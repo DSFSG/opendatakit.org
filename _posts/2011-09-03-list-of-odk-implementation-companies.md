@@ -9,4 +9,4 @@ aktt_notify_twitter:
   - 'no'
 
 ---
-Moved to [Help](/help)
+Moved to [Help](https://getodk.org/help/)
