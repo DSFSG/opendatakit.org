@@ -84,4 +84,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: feat/redirect
