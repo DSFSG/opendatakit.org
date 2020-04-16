@@ -1,4 +1,4 @@
-s3_bucket: opendatakit.org
+s3_bucket: dfsfg-opendatakit.org
 s3_endpoint: us-west-2
 
 site: _site
@@ -12,7 +12,7 @@ exclude_from_upload:
   - s3_website.yml
   - CNAME
 
-cloudfront_distribution_id: E1EZ24MS8LWP3O
+cloudfront_distribution_id: E2DJMYGOXV8T2M
 
 # commented out due to bug: https://github.com/laurilehmijoki/s3_website/issues/320
 # cloudfront_distribution_config:
