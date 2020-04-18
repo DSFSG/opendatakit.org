@@ -28,6 +28,11 @@ cloudfront_wildcard_invalidation: true
 
 # folder redirects. executed from top to bottom.
 routing_rules:
+  - condition:
+      key_prefix_equals: xlsform/
+    redirect:
+      host_name: getodk.org
+      http_redirect_code: 301
   # help/form-design/*
   - condition:
       key_prefix_equals: help/form-design/binding
@@ -307,4 +312,5 @@ routing_rules:
 # single page redirects. only use with paths that are not in folder redirects.
 redirects:
   feed/index.html: feed.xml
-  xiframe/index.html: https://getodk.org/xlsform/
+  xiframe/index.html: https://opendatakit.org/xlsform
+  xlsform: https://opendatakit.org/xlsform
