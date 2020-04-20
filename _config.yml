@@ -18,7 +18,7 @@ description              : &description "The Open Data Kit community produces fr
 tagline                  : 
 url                      : "https://opendatakit.org" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "opendatakit/website"
+repository               : "dsfsg/opendatakit.org"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -87,7 +87,7 @@ social:
 analytics:
   provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-19376020-1
+    tracking_id          : UA-164080171-1
 
 
 # Site Author
