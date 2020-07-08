@@ -76,7 +76,7 @@ img {
     text-shadow: 0 0 0;
     text-align: left; 
     max-width: none;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .feature__wrapper {
@@ -110,3 +110,8 @@ img {
   }  
 
 }
+
+.page__hero--overlay {
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
