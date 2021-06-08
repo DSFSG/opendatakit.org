@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/work
     docker:
-      - image: circleci/ruby:latest
+      - image: circleci/ruby:2.7
     environment:
       - JEKYLL_ENV=production
       - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -45,7 +45,7 @@ jobs:
   deploy:
     working_directory: ~/work
     docker:
-      - image: circleci/ruby:latest
+      - image: circleci/ruby:2.7
     steps:
       - attach_workspace:
           at: ~/work
