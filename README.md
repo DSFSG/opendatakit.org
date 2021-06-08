@@ -1,6 +1,6 @@
 # ODK Website
 
-![Platform](https://img.shields.io/badge/platform-Jekyll-blue.svg) [![Ruby version](https://img.shields.io/badge/ruby-blue.svg)](https://www.ruby-lang.org/en/downloads/) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/dsfsg/opendatakit.org.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/dsfsg/opendatakit.org/) 
+![Platform](https://img.shields.io/badge/platform-Jekyll-blue.svg) [![Ruby version](https://img.shields.io/badge/ruby-blue.svg)](https://www.ruby-lang.org/en/downloads/) [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/) [![Build status](https://circleci.com/gh/DSFSG/opendatakit.org.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/dsfsg/opendatakit.org/) 
 
 This repository is home to the [Open Data Kit redirect page](https://opendatakit.org/). It's primary purpose is to redirect to the autonomous project sites for [ODK](https://getodk.org) and [ODK-X](https://odk-x.org). It also provides historic information.
 
