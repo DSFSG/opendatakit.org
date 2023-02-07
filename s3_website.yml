@@ -272,6 +272,12 @@ routing_rules:
       http_redirect_code: 301
   # software
   - condition:
+      key_prefix_equals: software/odk
+    redirect:
+      host_name: getodk.org
+      replace_key_with: software
+      http_redirect_code: 301
+  - condition:
       key_prefix_equals: software/odk1
     redirect:
       host_name: getodk.org
